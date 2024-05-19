@@ -29,6 +29,7 @@ void USCStaticDataManager::RemoveStaticDatas()
 {
 	for (const auto& StaticData : StaticDataList)
 	{
+		ensure(StaticData.Value);
 		if (UObject* StaticDataObj = Cast<UObject>(StaticData.Value))
 		{
 			StaticData.Value->Clean();
@@ -44,10 +45,8 @@ void USCStaticDataManager::LoadAllData()
 {
 	for (const auto& StaticData : StaticDataList)
 	{
-		if (StaticData.Value)
-		{
-			StaticData.Value->Initialization();
-		}
+		ensure(StaticData.Value);
+		StaticData.Value->Initialization();
 	}
 }
 
