@@ -11,7 +11,7 @@
 - 의상 관리 시스템 컴포넌트로 다양한 요구사항에 대응하기 위한 데이터 기반 설계를 하였습니다.
 
 ## [TectProject](https://github.com/kwonymo88/TechProject.git)
-- 모션 매칭 테스트
+- 현재는 모션 매칭 테스트만 존재하며 지속적으로 언리얼의 기능 테스트를 진행 할 예정입니다.
 
 ## [TopDownRPG](https://github.com/kwonymo88/TopDownRPG)
-- Udemy 강의보며 따라 만들어보기
+- GameAbilitySystem 노하우를 얻고자 Udemy 강의보며 따라 만들어보기 진행 중 입니다.
