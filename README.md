@@ -1,10 +1,10 @@
 # SampleCodeProject
 - SampleCodeProject의 코드들은 프로젝트에서 작업한 일부 코드만을 정리했습니다.
 
-## [StaticDataManager](Source/SampleCode/)
+## [StaticDataManager](Source/SampleCode/ClothesSystem/)
 - Template을 활용한 데이터 관리 클래스, IStaticDataInterface를 상속받은 StaticData 데이터들의 관리를 위한 기능들 입니다.
 
-## [InteractionInterface](Source/SampleCode/)
+## [InteractionInterface](Source/SampleCode/InteractionInterface/)
 - InteractiveObjectInterface(대상)과 PlayerInteractionInterface(플레이어)를 구성하여 객체간의 직접적인 의존성을 줄이고자 하였습니다.
 
 ## [ClothesSystem](Source/SampleCode/StaticDataManager/)
