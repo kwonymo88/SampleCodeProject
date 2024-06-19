@@ -15,6 +15,6 @@
 [PlayerInteractionInterface.h](Source/SampleCode/InteractionInterface/PlayerInteractionInterface.h)
 
 ## ClothesSystem
-- 의상 관리 시스템의 다양한 요구사항에 대응하기 위한 컴포넌트 기반의 컨텐츠 샘플
+- 의상 관리 시스템 기본 기능 코드 샘플
 
 [SCClothesSystemComponent.h](Source/SampleCode/ClothesSystem/SCClothesSystemComponent.h)
