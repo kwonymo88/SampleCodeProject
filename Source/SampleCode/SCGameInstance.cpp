@@ -2,7 +2,6 @@
 
 
 #include "SCGameInstance.h"
-#include "Manager\SCStaticDataManager.h"
 
 void USCGameInstance::Init()
 {

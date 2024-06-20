@@ -18,6 +18,9 @@ class SAMPLECODE_API IPlayerInteractionInterface : public IInterface
 
 	friend class IInteractiveObjectInterface;
 
+public:
+	void TryInteract();
+
 protected:
 	TArray<TWeakInterfacePtr<IInteractiveObjectInterface>> OverlappedInteractiveObject;
 
@@ -35,7 +38,4 @@ protected:
 	void AddOverlappedInteractiveObject(IInteractiveObjectInterface* NewOverlappedInteractiveObject);
 	void RemoveOverlappedInteractiveObject(IInteractiveObjectInterface* RemoveOverlappedInteractiveObject);
 	//====================== End for friend class =============================
-
-public:
-	void TryInteract();
 };

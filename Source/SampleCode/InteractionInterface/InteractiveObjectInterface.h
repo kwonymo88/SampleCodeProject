@@ -23,6 +23,18 @@ class SAMPLECODE_API IInteractiveObjectInterface : public IInterface
 {
 	GENERATED_IINTERFACE_BODY()
 
+public:
+	virtual void DoInteract(IPlayerInteractionInterface* PlayerInteractionInterface);
+	virtual void EndInteract();
+	virtual void OnInteracting(const bool Interacting) {}
+	virtual bool ShouldInteract() const;
+
+public:
+	FOnEnableInteractDelegate& GetOnEnableInteractDelegate() { return _OnEnableInteractDelegate; }
+	FOnDisableInteractDelegate& GetOnDisableInteractDelegate() { return _OnDisableInteractDelegate; }
+	FOnDeactivateInteractDelegate& GetOnDeactivateInteractDelegate() { return _OnDeactivateInteractDelegate; }
+	FOnChangedPlayerDelegate& GetOnChangedPlayerDelegate() { return _OnChangedPlayerDelegate; }
+
 protected:
 	TWeakObjectPtr<UCapsuleComponent> InteractiveCapsuleComponent;
 
@@ -31,18 +43,6 @@ protected:
 	FOnDisableInteractDelegate _OnDisableInteractDelegate;
 	FOnDeactivateInteractDelegate _OnDeactivateInteractDelegate;
 	FOnChangedPlayerDelegate _OnChangedPlayerDelegate;
-
-public:
-	FOnEnableInteractDelegate& GetOnEnableInteractDelegate() { return _OnEnableInteractDelegate; }
-	FOnDisableInteractDelegate& GetOnDisableInteractDelegate() { return _OnDisableInteractDelegate; }
-	FOnDeactivateInteractDelegate& GetOnDeactivateInteractDelegate() { return _OnDeactivateInteractDelegate; }
-	FOnChangedPlayerDelegate& GetOnChangedPlayerDelegate() { return _OnChangedPlayerDelegate; }
-
-public:
-	virtual void DoInteract(IPlayerInteractionInterface* PlayerInteractionInterface);
-	virtual void EndInteract();
-	virtual void OnInteracting(const bool Interacting) {}
-	virtual bool ShouldInteract() const;
 	
 protected:
 	virtual void SetCollisionComponent(UCapsuleComponent* CollisionComp);

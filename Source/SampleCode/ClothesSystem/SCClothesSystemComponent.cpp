@@ -87,7 +87,10 @@ void USCClothesSystemComponent::TakeOffAllClothes()
 	for (const auto& ClothesObject : EquipedClothesObjects)
 	{
 		OnRemoveClothesObjectDelegate.Broadcast(ClothesObject.Value);
-		ClothesObject.Value->ConditionalBeginDestroy();
+		if (ClothesObject.Value)
+		{
+			ClothesObject.Value->ConditionalBeginDestroy();
+		}
 	}
 	EquipedClothesObjects.Empty();
 }

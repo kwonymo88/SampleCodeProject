@@ -7,7 +7,6 @@
 #include "UObject/StrongObjectPtr.h"
 #include "SCGameInstance.generated.h"
 
-class USCStaticDataManager;
 /**
  * 
  */
@@ -16,8 +15,6 @@ class SAMPLECODE_API USCGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 	
-protected:
-	TObjectPtr<USCStaticDataManager> StaticDataManager;
 
 public:
 	virtual void Init() override;

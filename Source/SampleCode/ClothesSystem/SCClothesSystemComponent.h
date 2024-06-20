@@ -38,6 +38,10 @@ class SAMPLECODE_API USCClothesSystemComponent : public UActorComponent
 public:	
 	USCClothesSystemComponent();
 
+public:
+	virtual bool PutOnClothesItem(const USCClothesItemDataAsset* ClothesItemData);
+	ASCCharacter* GetOwnerSCCharacter() const { return OwnerCharacter; }
+
 protected:
 	virtual void BeginPlay() override;
 	virtual void OnRegister() override;
@@ -51,10 +55,6 @@ protected:
 	virtual void TakeOffClothes(const EEquipType TakeOffEquipType);
 	virtual void TakeOffAllClothes();
 	virtual bool InternalPutOnClothes(const USCClothesItemDataAsset* ClothesItemData);
-
-public:
-	virtual bool PutOnClothesItem(const USCClothesItemDataAsset* ClothesItemData);
-	ASCCharacter* GetOwnerSCCharacter() const { return OwnerCharacter; }
 
 protected:
 	UPROPERTY(EditDefaultsOnly, Category="ClothesSystem|ClothesObjectClassData")
